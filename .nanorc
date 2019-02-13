@@ -1,0 +1,8 @@
+set tabsize 4
+set tabstospaces
+set nohelp
+set nowrap
+set constantshow
+set linenumbers
+set regexp
+set speller "aspell -x -c"

@@ -1,0 +1,98 @@
+conky.config = {
+    use_xft = true,
+    xftalpha = 0.0,
+    update_interval = 2.0,
+    total_run_times = 0,
+    own_window = true,
+    own_window_transparent = false,
+    own_window_argb_visual = true,
+    own_window_argb_value = 200,
+    own_window_colour = '232323',
+    own_window_type = 'normal',
+    own_window_class = 'conky',
+    own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+    background = false,
+    double_buffer = true,
+    imlib_cache_size = 0,
+    no_buffers = true,
+    uppercase = false,
+    cpu_avg_samples = 2,
+    override_utf8_locale = true,
+    minimum_width = 220,
+    maximum_width = 220,
+ 
+    -- placement
+    alignment = 'top_right',
+    gap_x = 15,
+    gap_y = 10,
+ 
+    -- default drawing
+    draw_shades = false,
+    draw_outline = false,
+    draw_borders = false,
+    draw_graph_borders = false,
+
+    -- colors
+    font = 'Noto Sans Mono:size=9',
+    default_color = 'FFFFFF',
+    color1 = 'FFFFFF',
+    color2 = 'fa7373',
+    color3 = 'AAAAAA',
+ 
+    -- layouting
+    template0 = [[${font Noto Sans:bold:size=12}${color2}\1 ${color3}${font}]],
+    template1 = [[${color1}\1]],
+    template2 = [[${goto 100}${color}]],
+    template3 = [[${goto 180}${color}${alignr}]],
+};
+ 
+conky.text = [[
+  ${template0 System}  
+
+  ${template1 Hostname} ${alignr}${execi 60 hostname -f}  
+  ${template1 ${sysname}} ${alignr}${execi 60 uname -v | awk '{print $4}'}  
+  ${template1 Uptime} ${alignr}${uptime_short}  
+  ${template1 CPU} ${alignr}${freq_g}GHz  
+
+
+  ${template0 Processors}  
+
+  ${template1 Load} ${alignr}${loadavg}  
+  ${template1 Core\ 1} ${alignr}${cpu cpu1}%  
+  ${template1 Core\ 2} ${alignr}${cpu cpu2}%  
+  ${template1 Core\ 3} ${alignr}${cpu cpu3}%  
+  ${template1 Core\ 4} ${alignr}${cpu cpu4}%  
+
+ 
+  ${template0 Memory}  
+
+  ${template1 Memory} ${alignr}${memperc}%  
+  Swap ${alignr}${swapperc}%  
+
+
+  ${template0 Filesystem}  
+
+  ${template1 root} ${alignr}${fs_used /} / ${fs_size}  
+
+     
+  ${template0 Networking}  
+
+${if_existing /proc/net/route enp4444}\
+  ${template1 IP} ${alignr}${addr wlan0}  
+  ${template1 AP} ${alignr}${wireless_essid wlan0}  
+  ${template1 Signal} ${template2}${wireless_link_qual_perc wlan0} ${template3}${wireless_link_bar wlan0}  
+  ${template1 Download} ${template2}${downspeed wlan0}              ${template3}${downspeedgraph wlan0}  
+  ${template1 Upload} ${template2}${upspeed wlan0}                ${template3}${upspeedgraph wlan0}  
+  ${template1 Total Down/Up} ${template3}${totaldown wlan0}↓ / {totalup wlan0}↑  
+${else}${if_existing /proc/net/route br0}\
+  ${template1 Ip} ${alignr}${addr br0}  
+  ${template1 Download} ${alignr}${downspeed br0}  
+  ${template1 Upload} ${alignr}${upspeed br0}  
+  ${template1 Total Down/Up} ${alignr}${totaldown br0}↓ / ${totalup br0}↑  
+${endif}${endif}
+
+  ${template0 Packages}  
+
+  ${template1 Upgrades} ${alignr}${execi 5 /home/x/scripts/upgrades}  
+  ${template1 Packages} ${alignr}${execi 5 dpkg -l | grep ^ii | wc -l}  
+]];

@@ -1,0 +1,23 @@
+fontname "Terminus:style=Regular:pixelsize=10"
+
+borderwidth 2
+color activeborder "Pale Violet Red"
+
+ignore Conky
+
+color font "White"
+color menubg "Black"
+color menufg "Gray"
+
+command lock slock
+command term "urxvtc -e fish"
+command Firefox	firefox
+
+bind C-Return "urxvtc -e fish"
+bind CM-x	"rofi -show combi"
+
+bind CM-q	quit
+bind CM-r	restart
+
+mousebind C-1 window_move
+mousebind C-3 window_resize

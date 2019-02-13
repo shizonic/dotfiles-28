@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_menu xmlns="http://openbox.org/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://openbox.org/
+                file:///usr/share/openbox/menu.xsd">
+
+<menu id="root-menu" label="Openbox 3">
+  <item label="Terminal">
+    <action name="Execute"><execute>urxvtc -e zsh</execute></action>
+  </item>
+  <item label="Browser">
+    <action name="Execute"><execute>firefox-esr</execute></action>
+  </item>
+  <item label="Filemanager">
+    <action name="Execute"><execute>pcmanfm</execute></action>
+  </item>
+  <item label="Mumble">
+    <action name="Execute"><execute>mumble</execute></action>
+  </item>
+  <item label="VS Code">
+    <action name="Execute"><execute>code</execute></action>
+  </item>
+  <item label="Thunderbird">
+    <action name="Execute"><execute>thunderbird</execute></action>
+  </item>
+  <item label="Geany">
+    <action name="Execute"><execute>geany</execute></action>
+  </item>
+  <item label="Signal">
+    <action name="Execute"><execute>signal-desktop</execute></action>
+  </item>
+  <item label="CMus">
+    <action name="Execute"><execute>urxvtc -e cmus</execute></action>
+  </item>
+  <item label="Hexchat">
+    <action name="Execute"><execute>hexchat</execute></action>
+  </item>
+  <item label="Zathura">
+    <action name="Execute"><execute>zathura</execute></action>
+  </item>
+  <item label="VirtualBox">
+    <action name="Execute"><execute>virtualbox</execute></action>
+  </item>
+  <item label="Libreoffice">
+    <action name="Execute"><execute>libreoffice</execute></action>
+  </item>
+  <separator />
+  <item label="ObConf">
+    <action name="Execute"><execute>obconf</execute></action>
+  </item>
+  <item label="LXAppearance">
+    <action name="Execute"><execute>lxappearance</execute></action>
+  </item>
+  <item label="QT Config">
+    <action name="Execute"><execute>qtconfig</execute></action>
+  </item>
+  <separator />
+  <item label="Reconfigure">
+    <action name="Reconfigure" />
+  </item>
+  <item label="Restart">
+    <action name="Restart" />
+  </item>
+  <separator />
+  <item label="Exit">
+    <action name="Exit" />
+  </item>
+</menu>
+
+</openbox_menu>

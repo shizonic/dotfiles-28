@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+
+set -e
+
+DOT_DIR=`pwd`
+
+ln -sf ${DOT_DIR}/.conkyrc $HOME/.conkyrc
+ln -sf ${DOT_DIR}/.cwmrc $HOME/.cwmrc
+ln -sf ${DOT_DIR}/.emacs.d $HOME/
+ln -sf ${DOT_DIR}/.gdbinit $HOME/.gdbinit
+ln -sf ${DOT_DIR}/.mplayer $HOME/
+ln -sf ${DOT_DIR}/.nanorc $HOME/.nanorc
+ln -sf ${DOT_DIR}/.themes $HOME/
+ln -sf ${DOT_DIR}/.tmux.conf $HOME/.tmux.conf
+ln -sf ${DOT_DIR}/.vimrc $HOME/.vimrc
+ln -sf ${DOT_DIR}/.Xdefaults $HOME/.Xdefaults
+ln -sf ${DOT_DIR}/.xinitrc $HOME/.xinitrc
+ln -sf ${DOT_DIR}/.zshrc $HOME/.zshrc
+ln -sf ${DOT_DIR}/.gitconfig $HOME/.gitconfig
+ln -sf ${DOT_DIR}/.inputrc $HOME/.inputrc
+ln -sf ${DOT_DIR}/.kshrc $HOME/.kshrc
+ln -sf ${DOT_DIR}/.tcshrc $HOME/.tcshrc
+ln -sf ${DOT_DIR}/.bashrc $HOME/.bashrc
+ln -sf ${DOT_DIR}/pkg-debian $HOME/pkg-debian
+
+mkdir -p $HOME/.config
+
+ln -sf ${DOT_DIR}/.config/cmus $HOME/.config/
+ln -sf ${DOT_DIR}/.config/compton.conf $HOME/.config/compton.conf
+ln -sf ${DOT_DIR}/.config/dunst $HOME/.config/
+ln -sf ${DOT_DIR}/.config/fish $HOME/.config/
+ln -sf ${DOT_DIR}/.config/fontconfig $HOME/.config/
+ln -sf ${DOT_DIR}/.config/i3 $HOME/.config/
+ln -sf ${DOT_DIR}/.config/openbox $HOME/.config/
+ln -sf ${DOT_DIR}/.config/polybar $HOME/.config/
+ln -sf ${DOT_DIR}/.config/rofi $HOME/.config/
+ln -sf ${DOT_DIR}/.config/tint2 $HOME/.config/
+ln -sf ${DOT_DIR}/.config/zathura $HOME/.config/
+ln -sf ${DOT_DIR}/.config/mpv $HOME/.config/
+
+ln -sf ${DOT_DIR}/scripts $HOME/

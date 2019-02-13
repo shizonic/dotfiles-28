@@ -1,0 +1,4 @@
+set default-fg "#ffffff"
+set default-bg "#232323"
+set statusbar-fg "#ffffff"
+set statusbar-bg "#232323"
