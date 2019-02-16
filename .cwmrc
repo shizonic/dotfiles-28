@@ -9,11 +9,11 @@ color font "White"
 color menubg "Black"
 color menufg "Gray"
 
-command lock slock
-command term "urxvtc -e fish"
+command Lock slock
+command Terminal "urxvtc"
 command Firefox	firefox
 
-bind C-Return "urxvtc -e fish"
+bind C-Return "urxvtc"
 bind CM-x	"rofi -show combi"
 
 bind CM-q	quit
