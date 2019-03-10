@@ -18,7 +18,7 @@ set -o notify # Tell me about background jobs right away
 export EDITOR=nano
 export PAGER=most
 export MANPAGER=most
-export VISUAL=most
+export VISUAL=vim
 export BROWSER=firefox
 export TZ='Europe/Berlin'
 export GREP_COLOR='1;36'

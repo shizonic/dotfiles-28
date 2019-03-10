@@ -14,6 +14,7 @@ fi
 eval $(ssh-agent)
 xset s off &
 xset -dpms &
+xset b off &
 setxkbmap -layout de -variant nodeadkeys &
 compton &
 sh ~/.fehbg &
@@ -35,4 +36,4 @@ dunst &
 #exec cwm
 #exec openbox-session
 #exec i3
-#exec startxfce4
+exec startxfce4
