@@ -13,7 +13,6 @@ conky.config = {
     own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
     background = false,
     double_buffer = true,
-    imlib_cache_size = 0,
     no_buffers = true,
     uppercase = false,
     cpu_avg_samples = 2,
@@ -24,7 +23,7 @@ conky.config = {
     -- placement
     alignment = 'top_right',
     gap_x = 15,
-    gap_y = 10,
+    gap_y = 5,
  
     -- default drawing
     draw_shades = false,
@@ -93,6 +92,5 @@ ${endif}${endif}
 
   ${template0 Packages}  
 
-  ${template1 Upgrades} ${alignr}${execi 5 /home/x/scripts/upgrades}  
   ${template1 Packages} ${alignr}${execi 5 dpkg -l | grep ^ii | wc -l}  
 ]];

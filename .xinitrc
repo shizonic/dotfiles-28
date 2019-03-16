@@ -16,8 +16,8 @@ xset s off &
 xset -dpms &
 xset b off &
 setxkbmap -layout de -variant nodeadkeys &
-compton &
-sh ~/.fehbg &
+#compton &
+#sh ~/.fehbg &
 xrdb -load ~/.Xdefaults &
 
 # vbox guest stuff
@@ -26,10 +26,10 @@ xrdb -load ~/.Xdefaults &
 #VBoxClient --seamless &
 
 urxvtd -q -o -f &
-emacs --daemon &
-tint2 &
-conky &
-dunst &
+#emacs --daemon &
+#tint2 &
+#conky &
+#dunst &
 
 # VBoxClient-all &
 

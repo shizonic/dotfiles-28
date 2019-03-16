@@ -1,34 +1,32 @@
-" Don't try to be vi compatible
-set nocompatible
+let loaded_matchparen = 1
 
-" Helps force plugins to load correctly when it is turned back on below
-filetype off
+syntax enable
+filetype indent on
 
-" Turn on syntax highlighting
-syntax on
-
-" For plugins to load correctly
-filetype plugin indent on
-
-" Security
-set modelines=0
-
-" Show line numbers
-set number
-
-" Show file stats
-set ruler
-
-" Blink cursor on error instead of beeping (grr)
-set visualbell
-
-" Encoding
-set encoding=utf-8
-
-" Rendering
-set ttyfast
-
-" Status bar
-set laststatus=2
-
+set laststatus=2 
+set showtabline=2 
+set noshowmode
 set t_Co=256
+set backspace=2
+set number
+set tabstop=4
+set softtabstop=4
+set expandtab
+set nobackup
+set showcmd
+set cursorline
+set wildmenu
+set lazyredraw
+set incsearch
+set hlsearch
+
+if has("autocmd")
+  au VimEnter,InsertLeave * silent execute '!echo -ne "\e[2 q"' | redraw!
+  au InsertEnter,InsertChange *
+	\ if v:insertmode == 'i' | 
+	\   silent execute '!echo -ne "\e[6 q"' | redraw! |
+	\ elseif v:insertmode == 'r' |
+	\   silent execute '!echo -ne "\e[4 q"' | redraw! |
+	\ endif
+au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
+endif
