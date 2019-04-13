@@ -21,9 +21,9 @@ conky.config = {
     maximum_width = 220,
  
     -- placement
-    alignment = 'top_right',
+    alignment = 'top_left',
     gap_x = 15,
-    gap_y = 5,
+    gap_y = 15,
  
     -- default drawing
     draw_shades = false,
@@ -61,7 +61,10 @@ conky.text = [[
   ${template1 Core\ 2} ${alignr}${cpu cpu2}%  
   ${template1 Core\ 3} ${alignr}${cpu cpu3}%  
   ${template1 Core\ 4} ${alignr}${cpu cpu4}%  
-
+  ${template1 Core\ 5} ${alignr}${cpu cpu5}%  
+  ${template1 Core\ 6} ${alignr}${cpu cpu6}%  
+  ${template1 Core\ 7} ${alignr}${cpu cpu7}%  
+  ${template1 Core\ 8} ${alignr}${cpu cpu8}%  
  
   ${template0 Memory}  
 

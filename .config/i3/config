@@ -21,7 +21,7 @@ set $mod Mod4
 #font pango:TerminessTTF Nerd Font 8
 font pango: FontAwesome 8
 font pango: Noto Sans 8
-#font pango:Terminus 8
+font pango:Terminus 8
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -35,7 +35,7 @@ floating_modifier $mod
 
 # start a terminal
 #bindsym $mod+Return exec xfce4-terminal
-bindsym $mod+Return exec urxvtc -e fish
+bindsym $mod+Return exec urxvtc 
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -120,6 +120,13 @@ bindsym $mod+8 workspace $workspace8
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $workspace1
+bindsym $mod+Shift+2 move container to workspace $workspace2
+bindsym $mod+Shift+3 move container to workspace $workspace3
+bindsym $mod+Shift+4 move container to workspace $workspace4
+bindsym $mod+Shift+5 move container to workspace $workspace5
+bindsym $mod+Shift+6 move container to workspace $workspace6
+bindsym $mod+Shift+7 move container to workspace $workspace7
+bindsym $mod+Shift+8 move container to workspace $workspace8
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -159,8 +166,8 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 
 # custom
-gaps inner 6
-gaps outer 3
+gaps inner 8
+gaps outer 6
 
 for_window [class="^.*"] border pixel 2
 
@@ -185,15 +192,18 @@ bindsym $mod+shift+x exec /home/x/bin/lock.sh
 # panel
 bar {
 	position top
+    #separator_symbol "<"
+    font pango:Terminus 9
 
     colors {
 		#background #2f343f
+		#background #2f343f
 	    #statusline #2f343f
-		#separator  #4b5262
+		separator  #00ff00
 
-		background #404040
+		background #262729
+		#background #404040
 	    statusline #404040
-		separator  #404040
 
 	    # colour of border, background, and text
 		focused_workspace   #404040 #ffb0b0 #232323

@@ -16,8 +16,8 @@ xset s off &
 xset -dpms &
 xset b off &
 setxkbmap -layout de -variant nodeadkeys &
-#compton &
-#sh ~/.fehbg &
+compton &
+sh ~/.fehbg &
 xrdb -load ~/.Xdefaults &
 
 # vbox guest stuff
@@ -28,12 +28,12 @@ xrdb -load ~/.Xdefaults &
 urxvtd -q -o -f &
 #emacs --daemon &
 #tint2 &
-#conky &
-#dunst &
+conky &
+dunst &
 
 # VBoxClient-all &
 
 #exec cwm
-#exec openbox-session
+exec openbox-session
 #exec i3
-exec startxfce4
+#exec startxfce4

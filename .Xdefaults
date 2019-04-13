@@ -6,10 +6,10 @@ Xft.hintstyle: hintslight
 
 URxvt.depth: 32
 URxvt.geometry: 90x28
-URxvt.font: xft:Terminus:style=Regular:pixelsize=18
-URxvt.boldFont: xft:Terminus:style=Regular:pixelsize=18
-URxvt.italicFont: xft:Terminus:style=Regular:pixelsize=18
-URxvt.boldItalicFont: xft:Terminus:style=Regular:pixelsize=18
+URxvt.font: xft:Terminus:style=Regular:pixelsize=16
+URxvt.boldFont: xft:Terminus:style=Regular:pixelsize=16
+URxvt.italicFont: xft:Terminus:style=Regular:pixelsize=16
+URxvt.boldItalicFont: xft:Terminus:style=Regular:pixelsize=16
 URxvt.scrollBar: false
 URxvt.saveLines: 100000
 URxvt.url-select.launcher: /usr/bin/firefox
@@ -18,11 +18,8 @@ URxvt.url-select.underline: true
 !urxvt*depth: 32
 !urxvt*background: rgba:0000/0000/0200/c800
 
-!xterm*faceName: Terminus:style=Regular:pixelsize=12
-!xterm*faceName: Inconsolata::style=Regular:pixelsize=18
-!xterm*boldFont: Inconsolata::style=Regular:pixelsize=18
-xterm*faceName: Hack:style=Regular:pixelsize=16
-xterm*boldFont: Hack:style=Regular:pixelsize=16
+xterm*faceName: Terminus:style=Regular:pixelsize=16
+xterm*boldFont: Terminus:style=Regular:pixelsize=16
 xterm*allowBoldFonts: false
 !xterm*vt100*geometry: 110x36
 xterm*saveLines: 100000
