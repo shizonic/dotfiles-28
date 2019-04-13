@@ -30,6 +30,7 @@ urxvtd -q -o -f &
 #tint2 &
 conky &
 dunst &
+xclock -padding 0 -digital -face "Terminus-12" &
 
 # VBoxClient-all &
 
